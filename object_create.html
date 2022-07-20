@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let studentData={
+        batch:"web19",
+        componey:"masai",
+        date:"4 April"
+    }
+    let s1=Object.create(studentData)
+    console.log(s1.batch)
+    s1.name="nilam"
+    console.log(studentData)
+    console.log(s1.name)
+
+    Array.prototype.nilam=function(a)
+    {
+        console.log("It's Nilam",a)
+    }
+
+    let arr=[1,2,3]
+    console.log(arr)
+    arr.nilam(5)
+    let a=[]
+    console.log(a)
+    a.nilam(2)
+
+    Array.prototype.nils=function(value)
+    {
+        let array=this
+        array[array.length]=value
+    }
+    arr.nils(6)
+    console.log("Push",arr)
+
+    console.log("***************")
+
+
+    Array.prototype.myMap=function(fun)
+    {   let newArray=[]
+        let a=this
+        console.log(a)
+        for(let i=0;i<a.length;i++)
+        {
+            let e=arr[i]
+            //console.log(fun(e))
+            newArray.push(fun(e))
+        }
+        return newArray
+    }
+
+
+  let x=  arr.myMap(function(element){
+        return element*2
+    })
+    console.log(x)
+
+    console.log("##########")
+
+    Array.prototype.myforEach=function(fun)
+    {
+        let a=this
+        for(let i=0;i<a.length;i++)
+        {
+            let e=a[i]
+            fun(e)
+        }
+    }
+
+    let ans=arr.myforEach(function(ele)
+    {
+       console.log(ele)
+    })
+    
+    let Ans=arr.forEach(function(e){
+        return e
+    })
+    console.log(Ans)
+    console.log("$$$$$$$$$$")
+    let mera=[1,2,3]
+    let dhakela=mera.myMap(function(e){
+        return e-1
+    })
+    console.log(dhakela)
+    dhakela.myforEach(function(e){
+        console.log("hey",e)
+    })
+
+
+
+    let Arr=[1,2,3]
+    
+</script>
